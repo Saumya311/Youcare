@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Profile Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+ <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>    
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/bg-registration-form-1.jpg');">
+			<div class="inner">
+				<div class="image-holder"> 
+					<img src="images/registration-form-1.jpg" class="hidden-xs" alt="">
+						<img src="images/registration-form-2.jpg" class="visible-xs" alt="">
+				</div>
+				<form action="">  
+				 
+					<h3>please share the details</h3>
+					 
+					<p class="fill">(Fields marked with * are mandatory)</p>
+					<div class="form-wrapper">
+						<input type="text" placeholder="First Name *" class="form-control" name="name">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+                    <div class="form-wrapper">
+						<input type="text" placeholder="Last Name *" class="form-control" name="name">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+                    
+					<div class="form-wrapper">
+						<input type="text" placeholder="Email Address*" class="form-control" name="email">
+						<i class="zmdi zmdi-email"></i>
+					</div>
+					
+				 	<div class="form-wrapper">
+						<input type="Mobile Number" placeholder="Mobile Number*" class="form-control" name="number">
+						<i class="zmdi zmdi-phone"></i>
+					</div> 
+					
+                    <div class="form-wrapper">
+						 
+    <label for="birthday" >Birthday*</label>
+     
+          <input autocomplete="off" class="text form-control " id="Birthday"  name="Birthday" placeholder="DD-MM-YYYY" type="date" min="1900-01-01" max="2022-05-01" spellcheck="false" ><i class="zmdi zmdi-calendar-note hidden-xs"></i>
+    
+   
+  
+						
+					</div>
+                    
+                    <div class="form-wrapper" >
+						<label for="birthday" >Anniversary</label>
+  <input autocomplete="off" class="text form-control" id="Anniversary"  name="MoveInDate" placeholder="DD-MM-YYYY" type="date" min="1900-01-01" max="2022-05-01" spellcheck="false" >
+    
+						<i class="zmdi zmdi-calendar-note hidden-xs" ></i>
+					</div> 
+                    
+					 
+             
+                                
+					<button> 
+						<a style="color:#fff;text-decoration:none" href="#popup1"  >Submit</a>
+					</button>
+                   
+
+				</form><div id="popup1" class="overlay">
+	<div class="popup">
+		 
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+		Thanks for updating your profile. We've credited your   wallet with <strong>  reward points</strong 
+		</div>
+	</div>
+</div><br> 
+			</div>
+		</div>
+		<script>
+        $(document).ready(function() {
+  $('.datepicker').pickadate({
+    formatSubmit: 'dd-mm-yyyy',
+    min: [0000,00,00],
+    max: [2022,01,15],
+    closeOnSelect: false,
+    closeOnClear: false,
+  });
+
+  // Autotab
+  $('.date-field').autotab('number');
+  
+  $('.single-date-field').mask('00/00/0000', 
+    {placeholder: "_ _ /_ _ /_ _ _ _"});
+});</script>
+	</body>
+    
+</html>
